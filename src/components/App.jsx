@@ -3,15 +3,13 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      currentVideo: exampleVideoData[0]
-
+      currentVideo: exampleVideoData[0],
+      videos: exampleVideoData
     };
-
   }
 
   componentDidMount() {
-    this.getYouTubeResults('depeche');
-
+    this.getYouTubeResults('depeche mode');
   }
 
   getYouTubeResults(searchTerms) {
@@ -19,9 +17,15 @@ class App extends React.Component {
       max: 5,
       key: 'AIzaSyDZQ48zhJFH1DPJBFJ-NQo5QKSWe4twumA',
       query: searchTerms
-
     };
-    searchYouTube(options);
+
+    var setAppState = function(newVideosArr) {
+      this.setState({
+        currentVideo: newVideosArr[0],
+        videos: newVideosArr
+      });
+    };
+    searchYouTube(options, setAppState.bind(this));
   }
 
   onVideoClick(video) {
@@ -30,10 +34,6 @@ class App extends React.Component {
       // currentVideo: exampleVideoData[1]
     });
   }
-
-
-
-	
 
   render() {
     return (
@@ -44,7 +44,7 @@ class App extends React.Component {
         </div>
         <div className="col-md-5">
         <VideoList 
-          videos={exampleVideoData}
+          videos={this.state.videos}
           onVideoClick={this.onVideoClick.bind(this)}
 
         />

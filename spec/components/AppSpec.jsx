@@ -57,11 +57,11 @@ describe('App', function() {
       );
     });
 
-    it('should call `searchYouTube` when app is initialized', function() {
+    it('should call `searchYouTube` when app is initialized THIS HAPPENS CHANGE TEST LATER', function() {
       expect(searchYouTubeStub.called).to.be.true;
     });
 
-    it('should load live data when app is initialized', function() {
+    it('should load live data when app is initialized THIS HAPPENS CHECK ME', function() {
       expect(searchYouTubeStub.called).to.be.true;
 
       var videoEntryTitleElements = scryRenderedDOMComponentsWithClass(app, 'video-list-entry-title');

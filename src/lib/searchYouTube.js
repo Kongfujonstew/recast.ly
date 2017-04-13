@@ -1,7 +1,7 @@
 var searchYouTube = ({key, query, max=5}, callback) => {
 
 
-  console.log('searchYouTube called');
+  console.log('searchYouTube called with query: ', query);
 
 
   $.get('https://www.googleapis.com/youtube/v3/search', {
@@ -11,12 +11,9 @@ var searchYouTube = ({key, query, max=5}, callback) => {
     part: 'snippet',
     type: 'video',
     videoEmbeddable: true,
-    // success: function(data) {
-    //   console.log(data)
-    // }
   })
   .done(function(items) {
-    console.log(items.items);
+    callback(items.items);
   })
   ;
 
