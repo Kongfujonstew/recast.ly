@@ -16,7 +16,7 @@ var searchYouTube = ({key, query, max=5}, callback) => {
     // }
   })
   .done(function(items) {
-    console.log(items);
+    console.log(items.items);
   })
   ;
 

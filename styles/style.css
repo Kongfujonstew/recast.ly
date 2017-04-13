@@ -41,6 +41,13 @@ body {
   box-shadow: 0 1px 0 rgba(0,0,0,0.10);
 }
 
+.target {
+  width: 40px;
+  height: 40px;
+  background: url('../src/target.jpg');
+  background-size: cover;
+}
+
 .video-player-details {
   background: hotpink;
   padding: 8px;
