@@ -1,5 +1,6 @@
 var searchYouTube = (options, callback) => {
-  // TODO
+
+  console.log('searchYouTube called');
 };
 
 window.searchYouTube = searchYouTube;

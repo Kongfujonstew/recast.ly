@@ -9,6 +9,19 @@ class App extends React.Component {
 
   }
 
+  componentDidMount() {
+    searchYouTube();
+
+  }
+
+  onVideoClick(video) {
+    this.setState({
+      currentVideo: video
+      // currentVideo: exampleVideoData[1]
+    });
+  }
+
+
 
 	
 
@@ -20,7 +33,11 @@ class App extends React.Component {
         <VideoPlayer video={this.state.currentVideo}/>
         </div>
         <div className="col-md-5">
-        <VideoList videos={exampleVideoData}/>
+        <VideoList 
+          videos={exampleVideoData}
+          onVideoClick={this.onVideoClick.bind(this)}
+
+        />
       </div>
     </div>
     );
