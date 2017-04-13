@@ -3,20 +3,25 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      videoSet: exampleVideoData,
-      currentVideo: videoSet[0]
+      currentVideo: exampleVideoData[0]
 
     };
 
   }
 
   componentDidMount() {
-    searchYouTube('depeche mode');
+    this.getYouTubeResults('depeche');
 
   }
 
   getYouTubeResults(searchTerms) {
-    searchYoutube(searchTerms);
+    var options = {
+      max: 5,
+      key: 'AIzaSyDZQ48zhJFH1DPJBFJ-NQo5QKSWe4twumA',
+      query: searchTerms
+
+    };
+    searchYouTube(options);
   }
 
   onVideoClick(video) {

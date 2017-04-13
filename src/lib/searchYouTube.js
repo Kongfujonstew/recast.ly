@@ -1,20 +1,25 @@
-var searchYouTube = (options, callback) => {
+var searchYouTube = ({key, query, max=5}, callback) => {
 
-  console.log(options);
+
   console.log('searchYouTube called');
 
 
-  $.get({
-    url: 'https://www.googleapis.cm/youtube/v3',
-    key: YOUTUBE_API_KEY,
-    query: options,
-    max: max || 5,
-    part: snippet,
-    data: data,
+  $.get('https://www.googleapis.com/youtube/v3/search', {
+    key: key,
+    q: query,
+    maxResults: max,
+    part: 'snippet',
+    type: 'video',
+    videoEmbeddable: true,
     // success: function(data) {
     //   console.log(data)
     // }
-  });
+  })
+  .done(function(items) {
+    console.log(items);
+  })
+  ;
+
 
 };
 
