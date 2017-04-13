@@ -3,15 +3,20 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      currentVideo: exampleVideoData[0]
+      videoSet: exampleVideoData,
+      currentVideo: videoSet[0]
 
     };
 
   }
 
   componentDidMount() {
-    searchYouTube();
+    searchYouTube('depeche mode');
 
+  }
+
+  getYouTubeResults(searchTerms) {
+    searchYoutube(searchTerms);
   }
 
   onVideoClick(video) {
@@ -28,7 +33,7 @@ class App extends React.Component {
   render() {
     return (
     <div>
-      <Nav />
+      <Nav searchYT={this.getYouTubeResults.bind(this)}/>
       <div className="col-md-7">
         <VideoPlayer video={this.state.currentVideo}/>
         </div>
