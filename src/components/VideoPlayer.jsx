@@ -55,8 +55,5 @@ class VideoPlayer extends React.Component {
 
 
 
-VideoPlayer.propTypes = {
-  video: React.PropTypes.object.isRequired
-};
 
 window.VideoPlayer = VideoPlayer;
