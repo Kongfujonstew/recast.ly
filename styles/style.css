@@ -4,6 +4,9 @@ body {
   background: hotpink;
 }
 
+#title {
+  margin: 20px;
+}
 
 .navbar {
   background: #fff;
@@ -20,6 +23,7 @@ body {
 }
 
 .search-bar {
+  vertical-align: right;
   border-radius: 1px;
   background: #fff;
 }
@@ -47,6 +51,8 @@ body {
   height: 40px;
   background: url('../src/target.jpg');
   background-size: cover;
+  border: 1px solid pink;
+  margin-left: 10px;
 }
 
 .video-player-details {

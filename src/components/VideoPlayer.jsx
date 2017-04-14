@@ -51,9 +51,6 @@ class VideoPlayer extends React.Component {
 
 
 
-//Start render refactor ..................................
-
-
 
 
 window.VideoPlayer = VideoPlayer;

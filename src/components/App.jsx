@@ -1,3 +1,9 @@
+// import React, { Component } from 'react'
+// import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
+
+
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -48,6 +54,7 @@ class App extends React.Component {
     return (
     <div>
       <Nav searchYT={this.getYouTubeResults.bind(this)}/>
+      <h1 id="title">Depeche Mode</h1>
       <div className="col-md-7">
         <VideoPlayer 
           video={this.state.currentVideo}

@@ -18,7 +18,9 @@
     "lodash": "^4.6.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-router": "*"
+    "react-fetch": "0.0.9",
+    "react-router": "*",
+    "webpack": "^2.3.3"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
