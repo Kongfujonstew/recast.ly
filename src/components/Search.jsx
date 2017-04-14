@@ -12,7 +12,7 @@ class Search extends React.Component {
   handleSearchInputChange(e) {
     this.setState({
       searchVal: e.target.value
-    });
+    }); 
   }
 
   searchYouTube8(searchTerm) {

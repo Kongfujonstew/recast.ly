@@ -4,7 +4,8 @@ class App extends React.Component {
 
     this.state = {
       currentVideo: exampleVideoData[0],
-      videos: exampleVideoData
+      videos: exampleVideoData,
+      autoPlay: false
     };
   }
 
@@ -35,12 +36,27 @@ class App extends React.Component {
     });
   }
 
+  toggleAutoPlay() {
+    console.log('tAP called');
+    this.setState({
+      autoPlay: !this.state.autoPlay
+    });
+
+  }
+
   render() {
     return (
     <div>
       <Nav searchYT={this.getYouTubeResults.bind(this)}/>
       <div className="col-md-7">
-        <VideoPlayer video={this.state.currentVideo}/>
+        <VideoPlayer 
+          video={this.state.currentVideo}
+          autoPlay={this.state.autoPlay}
+        />
+        <h1
+          onClick={this.toggleAutoPlay.bind(this)}
+
+        >AutoPlay: {this.state.autoPlay+''}</h1>
         </div>
         <div className="col-md-5">
         <VideoList 
