@@ -20,6 +20,7 @@
     "react-dom": "^15.5.4",
     "react-fetch": "0.0.9",
     "react-router": "*",
+    "require": "^2.4.20",
     "webpack": "^2.3.3"
   },
   "devDependencies": {

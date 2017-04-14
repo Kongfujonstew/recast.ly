@@ -1,3 +1,7 @@
+
+// import Fetch from '../../../node_modules/react-fetch'
+
+
 class VideoPlayer extends React.Component {
   constructor(props) {
     super(props);

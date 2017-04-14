@@ -20,7 +20,7 @@ class Search extends React.Component {
   }
 
   handleClick(searchTerm) {
-    this.searchYouTube8(this.state.searchVal);
+    this.searchYouTube8(this.state.searchVal + ' Depeche Mode');
   }
 
 

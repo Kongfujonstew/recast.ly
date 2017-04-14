@@ -54,7 +54,7 @@ class App extends React.Component {
     return (
     <div>
       <Nav searchYT={this.getYouTubeResults.bind(this)}/>
-      <h1 id="title">Depeche Mode</h1>
+      <h1 id="title">Nothin' But Depeche Mode</h1>
       <div className="col-md-7">
         <VideoPlayer 
           video={this.state.currentVideo}
